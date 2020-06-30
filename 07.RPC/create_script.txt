@@ -1,0 +1,12 @@
+dotnet new console --name RPCServer
+mv RPCServer/Program.cs RPCServer/RPCServer.cs
+dotnet new console --name RpcClient
+mv RpcClient/Program.cs RpcClient/RpcClient.cs
+cd RPCServer
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .
+cd ../RpcClient
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .

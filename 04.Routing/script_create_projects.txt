@@ -1,0 +1,12 @@
+dotnet new console --name EmitLogDirect
+mv EmitLogDirect/Program.cs EmitLogDirect/EmitLogDirect.cs
+dotnet new console --name ReceiveLogsDirect
+mv ReceiveLogsDirect/Program.cs ReceiveLogsDirect/ReceiveLogsDirect.cs
+cd EmitLogDirect
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .
+cd ../ReceiveLogsDirect
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .

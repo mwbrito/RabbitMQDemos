@@ -1,0 +1,6 @@
+dotnet new console --name PublisherConfirms
+mv PublisherConfirms/Program.cs PublisherConfirms/PublisherConfirms.cs
+cd PublisherConfirms
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .

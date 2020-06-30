@@ -1,0 +1,12 @@
+dotnet new console --name NewTask
+mv NewTask/Program.cs NewTask/NewTask.cs
+dotnet new console --name Worker
+mv Worker/Program.cs Worker/Worker.cs
+cd NewTask
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .
+cd ../Worker
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .

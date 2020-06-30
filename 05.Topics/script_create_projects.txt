@@ -1,0 +1,12 @@
+dotnet new console --name EmitLogTopic
+mv EmitLogTopic/Program.cs EmitLogTopic/EmitLogTopic.cs
+dotnet new console --name ReceiveLogsTopic
+mv ReceiveLogsTopic/Program.cs ReceiveLogsTopic/ReceiveLogsTopic.cs
+cd EmitLogTopic
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .
+cd ../ReceiveLogsTopic
+dotnet add package RabbitMQ.Client
+dotnet restore
+code .
